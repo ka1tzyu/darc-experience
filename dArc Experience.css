@@ -375,8 +375,13 @@ POEM
 }
 
 
-
-
+/* image center */
+img:is([alt*=ctr], [alt*=center]),
+.imgctr img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 
