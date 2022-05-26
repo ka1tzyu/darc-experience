@@ -269,32 +269,110 @@ POEM
 }
 
 
+/*--Center Headings--*/
+.hc h1,
+.hc h2,
+.hc h3,
+.hc h4,
+.hc h5,
+.hc h6 {
+    text-align: center;
+}
 
+.hc h6,
+.hc .cm-header-6 {
+    color: var(--text-muted);
+}
 
+.w-hcl h1::after, .w-hcl h2::after, .w-hcl h3::after, .w-hcl h4::after, .w-hcl h5::after, .w-hcl h6::after, .w-hcl.is-live-preview .HyperMD-header-1::after, .w-hcl.is-live-preview .HyperMD-header-2::after, .w-hcl.is-live-preview .HyperMD-header-3::after, .w-hcl.is-live-preview .HyperMD-header-4::after,
+.hc h1::after,
+.hc h2::after,
+.hc h3::after,
+.hc h4::after,
+.hc h5::after,
+.hc h6::after,
+.hc.is-live-preview .HyperMD-header-1::after,
+.hc.is-live-preview .HyperMD-header-2::after,
+.hc.is-live-preview .HyperMD-header-3::after,
+.hc.is-live-preview .HyperMD-header-4::after {
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.hc.is-live-preview .HyperMD-header, .hc .is-live-preview .HyperMD-header,
+.hcl.is-live-preview .HyperMD-header,
+.hcl .is-live-preview .HyperMD-header {
+    text-align: center;
+}
 
+/*--Center Headings With Line--*/
+.hcl h1, .hcl h2, .hcl h3, .hcl h4, .hcl h5, .hcl h6 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
 
+.hcl h1 > :not(.collapse-indicator), .hcl h2 > :not(.collapse-indicator), .hcl h3 > :not(.collapse-indicator), .hcl h4 > :not(.collapse-indicator), .hcl h5 > :not(.collapse-indicator), .hcl h6 > :not(.collapse-indicator) {
+    margin: 0 10px;
+}
 
+.hcl h1 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h2 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h3 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h4 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h5 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h6 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child) {
+    margin: 0 10px;
+}
 
+.hcl h1:before, .hcl h1:after, .hcl h2:before, .hcl h2:after, .hcl h3:before, .hcl h3:after, .hcl h4:before, .hcl h4:after, .hcl h5:before, .hcl h5:after, .hcl h6:before, .hcl h6:after {
+    content: "";
+    flex: 1;
+}
 
+.hcl h1:before, .hcl h2:before, .hcl h3:before, .hcl h4:before, .hcl h5:before, .hcl h6:before {
+    margin-right: 0.3em;
+}
 
+.hcl h1:after, .hcl h2:after, .hcl h3:after, .hcl h4:after, .hcl h5:after, .hcl h6:after {
+    margin-left: 0.3em;
+}
 
+.hcl .heading-collapse-indicator {
+    position: absolute;
+}
 
+.hcl h1::before, .hcl h1::after, .hcl .HyperMD-header-1::after {
+    height: 6px;
+    background: var(--h1-cl);
+    width: auto;
+}
 
+.hcl h2::before, .hcl h2::after, .hcl .HyperMD-header-2::after {
+    height: 5px;
+    background: var(--h2-cl);
+    width: auto;
+}
 
+.hcl h3::before, .hcl h3::after, .hcl .HyperMD-header-3::after {
+    height: 4px;
+    background: var(--h3-cl);
+    width: auto;
+}
 
+.hcl h4::before, .hcl h4::after, .hcl .HyperMD-header-4::after {
+    height: 3px;
+    background: var(--h4-cl);
+    width: 100%;
+}
 
+.hcl h5::before, .hcl h5::after, .hcl .HyperMD-header-5::after {
+    height: 3px;
+    background: var(--h5-cl);
+    width: auto;
+}
 
-
-
-
-
-
-
-
-
-
-
+.hcl h6::before, .hcl h6::after, .hcl .HyperMD-header-6::after {
+    height: 3px;
+    background: var(--h6-cl);
+    width: auto;
+}
 
 
 
@@ -530,6 +608,48 @@ settings:
         min: 0.00
         max: 1.00
         step: 0.05
+    -
+        id: title3454
+        title: Header Lines
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: h1-cl
+        title: Heading 1
+        type: variable-color
+        format: hex
+        default: '#7F7F7F'
+    -
+        id: h2-cl
+        title: Heading 2
+        type: variable-color
+        format: hex
+        default: '#7F7F7F'
+    -
+        id: h3-cl
+        title: Heading 3
+        type: variable-color
+        format: hex
+        default: '#7F7F7F'
+    -
+        id: h4-cl
+        title: Heading 4
+        type: variable-color
+        format: hex
+        default: '#7F7F7F'
+    -
+        id: h5-cl
+        title: Heading 5
+        type: variable-color
+        format: hex
+        default: '#7F7F7F'
+    -
+        id: h6-cl
+        title: Heading 6
+        type: variable-color
+        format: hex
+        default: '#7F7F7F'
     -
         id: title3
         title: Fixes
