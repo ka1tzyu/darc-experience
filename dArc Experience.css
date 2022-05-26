@@ -1,11 +1,9 @@
+/* Fixing breadcrumbs view's buttons */
 .BC-matrix-buttons {
     padding: 0 10px;
 }
 
-.active-line-on .cm-line.cm-active,
-.active-line-on .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-active {
-    box-shadow: -27vw 0 var(--background-active-line), 25vw 0 var(--background-active-line)
-}
+
 
 /*
 HEADER LIGHTS
@@ -33,29 +31,13 @@ body.neon-lights h6 {
     overflow: visible;
 }
 
-body.neon-lights h1 {
-    text-shadow: 0 0 var(--light-smooth) #FF00FF;
-}
+body.neon-lights h1 {text-shadow: 0 0 var(--light-smooth) #FF00FF;}
+body.neon-lights h2 {text-shadow: 0 0 var(--light-smooth) #00FFFF;}
+body.neon-lights h3 {text-shadow: 0 0 var(--light-smooth) #00FF00;}
+body.neon-lights h4 {text-shadow: 0 0 var(--light-smooth) #FFFF00;}
+body.neon-lights h5 {text-shadow: 0 0 var(--light-smooth) #FF0000;}
+body.neon-lights h6 {text-shadow: 0 0 var(--light-smooth) #0000FF;}
 
-body.neon-lights h2 {
-    text-shadow: 0 0 var(--light-smooth) #00FFFF;
-}
-
-body.neon-lights h3 {
-    text-shadow: 0 0 var(--light-smooth) #00FF00;
-}
-
-body.neon-lights h4 {
-    text-shadow: 0 0 var(--light-smooth) #FFFF00;
-}
-
-body.neon-lights h5 {
-    text-shadow: 0 0 var(--light-smooth) #FF0000;
-}
-
-body.neon-lights h6 {
-    text-shadow: 0 0 var(--light-smooth) #0000FF;
-}
 
 
 /*
@@ -138,103 +120,47 @@ body:not(.remove-ed-rel-lines) .cm-hmd-list-indent .cm-tab::before {
 }
 
 
+
 /*
 FIXES
 */
-body.arrows-fix-8f5 .titlebar-button-container.mod-left {
-    margin-left: 0.5em !important;
-}
+body.arrows-fix-8f5 .titlebar-button-container.mod-left {margin-left: 0.5em !important;}
 
-body.statusbar-margins-8f5 .status-bar-item.plugin-word-count .status-bar-item-segment:first-child {
-    margin-right: 6px
-}
+body.statusbar-margins-8f5 .status-bar-item.plugin-word-count .status-bar-item-segment:first-child {margin-right: 6px;}
+body.statusbar-margins-8f5 .status-bar-item {margin-right: 3px;}
 
-body.statusbar-margins-8f5 .status-bar-item {
-    margin-right: 3px
-}
+body.emoji-fix-8f5 img.emoji {max-height: 14px;}
 
-body.emoji-fix-8f5 img.emoji {
-    max-height: 14px;
-}
+body.timeline-fix-8f5.is-mobile div.timeline .timeline-container h2 {font-size: 24px;}
 
-body.timeline-fix-8f5.is-mobile div.timeline .timeline-container h2 {
-    font-size: 24px;
-}
+body.timeline-fix-8f5.is-mobile div.timeline .timeline-container .timeline-card h3 {font-size: 18px;}
+body.timeline-fix-8f5.is-mobile div.timeline .timeline-container .timeline-card p {font-size: 12px;}
+body.timeline-fix-8f5.is-mobile div.timeline .timeline-container .timeline-card {width: 120%;}
 
-body.timeline-fix-8f5.is-mobile div.timeline .timeline-container .timeline-card h3 {
-    font-size: 18px;
-}
-
-body.timeline-fix-8f5.is-mobile div.timeline .timeline-container .timeline-card p {
-    font-size: 12px;
-}
-
-body.timeline-fix-8f5.is-mobile div.timeline .timeline-container .timeline-card {
-    width: 120%;
-}
 
 
 /*
-MINIMAL ENCHANCE
+MINIMAL ENHANCE
 */
-.cards table.dataview tbody > tr > td > :not(.el-embed-image) img {
-    border-radius: var(--cards-image-border-5f);
-}
+.cards table.dataview tbody > tr > td > :not(.el-embed-image) img {border-radius: var(--cards-image-border-5f);}
+.cards table.dataview tbody > tr > td > span {font-size: var(--cards-text-size-5f);}
+.cards table.dataview tbody > tr > td:nth-child(1) > span {font-size: 100%;}
+.cards table.dataview tbody > tr > td:nth-child(2) > span {font-size: 110%;}
 
-.cards table.dataview tbody > tr > td > span {
-    font-size: var(--cards-text-size-5f);
-}
+body.cards-advanced-poster-5f .cards.cards-cover table > tbody > tr > td:nth-child(1) {width: 100%;}
 
-.cards table.dataview tbody > tr > td:nth-child(1) > span {
-    font-size: 100%;
-}
+body.cards-advanced-poster-5f .cards.cards-cover table > tbody > tr > td:nth-child(1) > span {padding-top: 0;}
 
-.cards table.dataview tbody > tr > td:nth-child(2) > span {
-    font-size: 110%;
-}
-
-body.cards-advanced-poster-5f .cards.cards-cover table > tbody > tr > td:nth-child(1) {
-    width: 100%;
-}
-
-body.cards-advanced-poster-5f .cards.cards-cover table > tbody > tr > td:nth-child(1) > span {
-    padding-top: 0;
-}
-
-body.cards-center-5f .cards table.dataview tbody > tr > td:not(:last-child):not(:first-child) > .el-p:not(.el-embed-image) {
-    text-align: center;
-}
+body.cards-center-5f .cards table.dataview tbody > tr > td:not(:last-child):not(:first-child) > .el-p:not(.el-embed-image) {text-align: center;}
 
 
-/*
-PERIODIC NOTES FIXES
-*/
 
-.timeline-container.svelte-ilz3jn::after {
-    display: none;
-}
-
-.timeline-container.svelte-ilz3jn {
-    top: 27px !important;
-    right: -15px !important;
-}
-
-body.is-mobile .timeline-container.svelte-ilz3jn {
-    top: 40px !important;
-    right: -10px !important;
-    width: 100%;
-}
-
-body.is-mobile .leaf-periodic-button.svelte-ilz3jn {
-    width: 100%;
-    text-align: right;
-}
 
 
 /* @settings
 
-name: Ka1 Extensions
-id: ka1xtension
+name: d'Arc Experience
+id: darc-experience
 settings:
     -
         id: title1
