@@ -155,11 +155,20 @@ body.cards-center-5f .cards table.dataview tbody > tr > td:not(:last-child):not(
 
 
 
+/* Fixing Colorful Heading (minimal theme settings plugin) */
+body.colorful-headings {
+    --h1-color: var(--red) !important;
+    --h2-color: var(--orange) !important;
+    --h3-color: var(--yellow) !important;
+    --h4-color: var(--green) !important;
+    --h5-color: var(--blue) !important;
+    --h6-color: var(--purple) !important;
+}
 
 
 /* @settings
 
-name: d'Arc Experience
+name: ❤ d'Arc Experience
 id: darc-experience
 settings:
     -
