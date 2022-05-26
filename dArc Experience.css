@@ -1,0 +1,381 @@
+.BC-matrix-buttons {
+    padding: 0 10px;
+}
+
+.active-line-on .cm-line.cm-active,
+.active-line-on .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-active {
+    box-shadow: -27vw 0 var(--background-active-line), 25vw 0 var(--background-active-line)
+}
+
+/*
+HEADER LIGHTS
+*/
+body.white-lights .cm-s-obsidian .cm-header,
+body.white-lights h1,
+body.white-lights h2,
+body.white-lights h3,
+body.white-lights h4,
+body.white-lights h5,
+body.white-lights h6 {
+    text-shadow: 0 0 var(--light-smooth) #fff;
+    font-weight: 600;
+    overflow: visible;
+}
+
+body.neon-lights .cm-s-obsidian .cm-header,
+body.neon-lights h1,
+body.neon-lights h2,
+body.neon-lights h3,
+body.neon-lights h4,
+body.neon-lights h5,
+body.neon-lights h6 {
+    font-weight: 600;
+    overflow: visible;
+}
+
+body.neon-lights h1 {
+    text-shadow: 0 0 var(--light-smooth) #FF00FF;
+}
+
+body.neon-lights h2 {
+    text-shadow: 0 0 var(--light-smooth) #00FFFF;
+}
+
+body.neon-lights h3 {
+    text-shadow: 0 0 var(--light-smooth) #00FF00;
+}
+
+body.neon-lights h4 {
+    text-shadow: 0 0 var(--light-smooth) #FFFF00;
+}
+
+body.neon-lights h5 {
+    text-shadow: 0 0 var(--light-smooth) #FF0000;
+}
+
+body.neon-lights h6 {
+    text-shadow: 0 0 var(--light-smooth) #0000FF;
+}
+
+
+/*
+RELATION LINES
+*/
+body:not(.remove-pre-rel-lines) ul > li,
+body:not(.remove-pre-rel-lines) ol > li,
+body:not(.remove-pre-rel-lines) ol,
+body:not(.remove-pre-rel-lines) ul {
+    position: relative;
+}
+
+/* Relationship lines in Preview */
+body:not(.remove-pre-rel-lines) .markdown-preview-view ul ul,
+body:not(.remove-pre-rel-lines) .markdown-preview-view ol ol {
+    position: relative;
+}
+
+body:not(.remove-pre-rel-lines) ul > li::before,
+body:not(.remove-pre-rel-lines) ol > li::before {
+    content: "";
+    border-left-width: var(--rel-line-width);
+    border-left-style: solid;
+    border-left-color: var(--rel-line-color);
+    opacity: 0.8;
+    position: absolute;
+    height: calc(100% - 2em);
+    margin-left: -0.85em;
+    /*left: -0.05em;*/
+    top: 1.6em;
+    bottom: 0;
+}
+
+body:not(.remove-pre-rel-lines) ul ul::before,
+body:not(.remove-pre-rel-lines) ol ol::before {
+    content: "";
+    position: absolute;
+}
+
+body:not(.remove-pre-rel-lines) .markdown-preview-view ol ol::before {
+    margin-left: -0.8em;
+}
+
+/* Relationship line spacing fix for tasks lists */
+body:not(.remove-pre-rel-lines) .markdown-preview-view .task-list-item-checkbox {
+    left: -1px;
+    margin-right: 5px;
+}
+
+body:not(.remove-pre-rel-lines) .markdown-preview-view ul.contains-task-list ul::before,
+body:not(.remove-pre-rel-lines) .markdown-preview-view ol.contains-task-list ol::before {
+    left: -0.1em;
+    bottom: 0.3em;
+}
+
+/* Relationship lines in Edit mode  */
+body:not(.remove-ed-rel-lines) .cm-s-obsidian > .cm-tab,
+body:not(.remove-ed-rel-lines) .cm-hmd-list-indent > .cm-tab,
+body:not(.remove-ed-rel-lines) .rel-lines-edit .cm-hmd-list-indent > .cm-tab {
+    position: relative;
+}
+
+body:not(.remove-ed-rel-lines) .cm-hmd-list-indent > .cm-tab:before,
+body:not(.remove-ed-rel-lines) .rel-lines-edit .cm-hmd-list-indent > .cm-tab:before,
+body:not(.remove-ed-rel-lines) .cm-hmd-list-indent .cm-tab::before {
+    content: "";
+    display: block;
+    position: absolute;
+    opacity: 0.35;
+    top: 0.25em;
+    left: 0.3em;
+    border-left-width: var(--rel-line-width); /*--custom-ed-line-thickness*/
+    border-left-style: solid;
+    border-left-color: var(--rel-line-color); /*--text-faint*/
+    height: 100%;
+}
+
+.cm-s-obsidian .HyperMD-list-line {
+    padding-top: 0;
+}
+
+
+/*
+FIXES
+*/
+body.arrows-fix-8f5 .titlebar-button-container.mod-left {
+    margin-left: 0.5em !important;
+}
+
+body.statusbar-margins-8f5 .status-bar-item.plugin-word-count .status-bar-item-segment:first-child {
+    margin-right: 6px
+}
+
+body.statusbar-margins-8f5 .status-bar-item {
+    margin-right: 3px
+}
+
+body.emoji-fix-8f5 img.emoji {
+    max-height: 14px;
+}
+
+body.timeline-fix-8f5.is-mobile div.timeline .timeline-container h2 {
+    font-size: 24px;
+}
+
+body.timeline-fix-8f5.is-mobile div.timeline .timeline-container .timeline-card h3 {
+    font-size: 18px;
+}
+
+body.timeline-fix-8f5.is-mobile div.timeline .timeline-container .timeline-card p {
+    font-size: 12px;
+}
+
+body.timeline-fix-8f5.is-mobile div.timeline .timeline-container .timeline-card {
+    width: 120%;
+}
+
+
+/*
+MINIMAL ENCHANCE
+*/
+.cards table.dataview tbody > tr > td > :not(.el-embed-image) img {
+    border-radius: var(--cards-image-border-5f);
+}
+
+.cards table.dataview tbody > tr > td > span {
+    font-size: var(--cards-text-size-5f);
+}
+
+.cards table.dataview tbody > tr > td:nth-child(1) > span {
+    font-size: 100%;
+}
+
+.cards table.dataview tbody > tr > td:nth-child(2) > span {
+    font-size: 110%;
+}
+
+body.cards-advanced-poster-5f .cards.cards-cover table > tbody > tr > td:nth-child(1) {
+    width: 100%;
+}
+
+body.cards-advanced-poster-5f .cards.cards-cover table > tbody > tr > td:nth-child(1) > span {
+    padding-top: 0;
+}
+
+body.cards-center-5f .cards table.dataview tbody > tr > td:not(:last-child):not(:first-child) > .el-p:not(.el-embed-image) {
+    text-align: center;
+}
+
+
+/*
+PERIODIC NOTES FIXES
+*/
+
+.timeline-container.svelte-ilz3jn::after {
+    display: none;
+}
+
+.timeline-container.svelte-ilz3jn {
+    top: 27px !important;
+    right: -15px !important;
+}
+
+body.is-mobile .timeline-container.svelte-ilz3jn {
+    top: 40px !important;
+    right: -10px !important;
+    width: 100%;
+}
+
+body.is-mobile .leaf-periodic-button.svelte-ilz3jn {
+    width: 100%;
+    text-align: right;
+}
+
+
+/* @settings
+
+name: Ka1 Extensions
+id: ka1xtension
+settings:
+    -
+        id: title1
+        title: Relation Lines
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: rel-line-color
+        title: Line color
+        type: variable-color
+        format: hex
+        default: '#7F7F7F'
+    -
+        id: rel-line-width
+        title: Line width
+        description: The width of the relation line in rem units
+        type: variable-number-slider
+        default: 2
+        format: px
+        min: 0
+        max: 3
+        step: 1
+    -
+        id: title2
+        title: Header Lights
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: light-variant
+        title: Lights variant
+        description: The variant of header lighting - white, neon (from 80`s neon theme) and None
+        type: class-select
+        allowEmpty: false
+        default: none
+        options:
+          -
+              label: None
+              value: none
+          -
+              label: White
+              value: white-lights
+          -
+              label: Neon
+              value: neon-lights
+    -
+        id: light-smooth
+        title: Light smooth
+        description: Choose how smoth effect should be in em
+        type: variable-number-slider
+        default: 0.50
+        format: em
+        min: 0.00
+        max: 1.00
+        step: 0.05
+    -
+        id: title3
+        title: Fixes
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: arrows-fix-8f5
+        title: Move Navigation Arrows
+        description: Arrows exhausted by default, so move them to right place
+        type: class-toggle
+        default: true
+    -
+        id: statusbar-margins-8f5
+        title: Statusbar Margins
+        description: Fix margins in statusbar, totally
+        type: class-toggle
+        default: true
+    -
+        id: emoji-fix-8f5
+        title: Emoji Size
+        description: Fixes emoji height in some cases (![[note]] tags) to 14px
+        type: class-toggle
+        default: true
+    -
+        id: timeline-fix-8f5
+        title: Timeline for Mobile
+        description: Fixes size of timeline`s card, headers and text
+        type: class-toggle
+        default: true
+    -
+        id: title5
+        title: Minimal Enchance
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: cards-image-border-5f
+        title: Cards Image Border
+        description: Changes image border radius in percents (%)
+        type: variable-number-slider
+        format: "%"
+        default: 0
+        min: 0
+        max: 10
+        step: 1
+    -
+        id: cards-text-size-5f
+        title: Smaller card`s text
+        description: This option sets the percent of font-size of all card`s elements except first 2 (image and link)
+        type: variable-number
+        format: "%"
+        default: 100
+    -
+        id: cards-advanced-poster-5f
+        title: Advanced card`s poster
+        description: It makes image wider (cards-cover class is needed!!)
+        type: class-toggle
+        default: false
+    -
+        id: cards-center-5f
+        title: Centerlize card`s text
+        description: Align to center all field excepet first and last
+        type: class-toggle
+        default: false
+    -
+        id: title4
+        title: Minimal Snippets
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: tab-style
+        title: Tab style
+        type: class-select
+        allowEmpty: false
+        default: tab-style-1
+        options:
+            -
+                label: Compact
+                value: tab-style-1
+            -
+                label: Wide
+                value: tab-style-3
+            -
+                label: Underlined
+                value: tab-style-2
+*/
