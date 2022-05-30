@@ -1,3 +1,10 @@
+/* CARD HEADER FIX */
+.cards .table-view-tbody span strong a {
+    font-size: 95%;
+}
+
+
+
 /* BUTTON CLASSES */
 .darc-button-wide {
     width: 100%;
