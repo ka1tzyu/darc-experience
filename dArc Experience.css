@@ -1,4 +1,16 @@
 /*
+MEMOS BACKGROUND FIX
+*/
+.theme-dark div[data-type='memos_view'] .memo-editor-wrapper {
+    background: #202020 !important;
+    border: 2px solid #232323 !important;
+}
+.theme-dark div[data-type='memos_view'] .memo-editor-wrapper > .memo-editor {
+    background: #202020 !important;
+}
+
+
+/*
 WRITING
 */
 
@@ -372,15 +384,6 @@ POEM
     height: 3px;
     background: var(--h6-cl);
     width: auto;
-}
-
-
-/* image center */
-img:is([alt*=ctr], [alt*=center]),
-.imgctr img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 
