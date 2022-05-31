@@ -1,3 +1,125 @@
+.theme-dark, .theme-light {
+    /*Sizes*/
+    --radius: 0px;
+    --micro: 70px;
+    --tiny: 100px;
+    --small: 200px;
+    --small-med: 300px;
+    --med-small: 400px;
+    --medium: 500px;
+    --med-tall: 600px;
+    --tall: 700px;
+}
+/*----Mobile----*/
+@media (max-width: 500px) {
+
+    .theme-dark, .theme-light {
+        /*Mobile Sizes*/
+        --radius: 0px;
+        --micro: 70px;
+        --tiny: 100px;
+        --small: 150px;
+        --small-med: 200px;
+        --med-small: 250px;
+        --medium: 300px;
+        --med-tall: 450px;
+        --tall: 500px;
+    }
+}
+
+/*Height*/
+img[alt*="hmicro"],
+.image-embed[src*="#hmicro"] img {
+    height: var(--micro);
+}
+img[alt*="htiny"],
+.image-embed[src*="#htiny"] img {
+    height: var(--tiny);
+}
+img[alt*="hsmall"],
+.image-embed[src*="#hsmall"] img {
+    height: var(--small);
+}
+img[alt*="hs-med"],
+.image-embed[src*="#hs-med"] img {
+    height: var(--small-med);
+}
+img[alt*="hm-sm"],
+.image-embed[src*="#hs-sm"] img {
+    height: var(--med-small);
+}
+img[alt*="hmed"],
+.image-embed[src*="#hmed"] img {
+    height: var(--medium);
+}
+img[alt*="hm-tl"],
+.image-embed[src*="#hm-tl"],
+.image-embed[src*="#hm-tl"] img {
+    height: var(--med-tall);
+}
+img[alt*="htall"],
+.image-embed[src*="#htall"] img {
+    height: var(--tall);
+}
+
+/*Width*/
+img[alt*="wmicro"],
+.image-embed[src*="#wmicro"] img,
+.image-embed[alt*="#wmicro"]::after {
+    width: var(--micro);
+}
+
+img[alt*="wtiny"],
+.image-embed[src*="#wtiny"] img,
+.image-embed[src*="#wtiny"]::after {
+    width: var(--tiny);
+}
+
+img[alt*="wsmall"],
+.image-embed[src*="#wsmall"] img,
+.image-embed[src*="#wsmall"]::after {
+    width: var(--small);
+}
+
+img[alt*="ws-med"],
+.image-embed[src*="#ws-med"] img,
+.image-embed[src*="#ws-med"]::after {
+    width: var(--small-med);
+}
+
+img[alt*="wm-sm"],
+.image-embed[src*="#wm-sm"] img,
+.image-embed[src*="#wm-sm"]::after {
+    width: var(--med-small);
+}
+
+img[alt*="wmed"],
+.image-embed[src*="#wmed"] img,
+.image-embed[src*="#wmed"]::after {
+    width: var(--medium);
+}
+
+img[alt*="wm-tl"],
+.image-embed[src*="#wm-tl"] img,
+.image-embed[src*="#wm-tl"]::after {
+    width: var(--med-tall);
+}
+
+img[alt*="wtall"],
+.image-embed[src*="#wtall"] img,
+.image-embed[src*="#wtall"]::after {
+    width: var(--tall);
+}
+
+/* image center */
+img:is([alt*=ctr], [alt*=center]),
+.imgctr img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 /* CARD HEADER FIX */
 .cards .table-view-tbody span strong a {
     font-size: 95%;
