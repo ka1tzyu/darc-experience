@@ -1,4 +1,116 @@
+.theme-light, .theme-dark {
+  --left-align-cornell-cssclass: 30%;
+  --gap-cornell-cssclass: 2.5%;
+  --text-align-cornell-cssclass: justify;
+  --text-align-last-cornell-cssclass: right;
+}
 
+.cornell div.el-p {
+  text-align: var(--text-align-cornell-cssclass);
+  margin-left: var(--left-align-cornell-cssclass);
+}
+.cornell aside {
+  /* since I made it 125px elsewhere for Willemstad */
+  text-align: var(--text-align-cornell-cssclass);
+
+  max-width: calc(var(--left-align-cornell-cssclass) - var(--gap-cornell-cssclass));
+  min-width: unset;
+
+  margin-left: 0;
+
+  float: left;
+  text-align-last: var(--text-align-last-cornell-cssclass);
+}
+.cornell .callout p {
+  text-align: var(--text-align-cornell-cssclass);
+  margin-left: unset;
+}
+.cornell .callout[data-callout^=cornell] {
+  display: flex;
+  background-color: unset;
+  gap: var(--gap-cornell-cssclass);
+  --callout-color: 0, 120, 0;
+}
+.cornell .callout[data-callout^=cornell] p {
+  margin-left: unset;
+}
+.cornell .callout[data-callout^=cornell] .callout-title {
+  display: flex;
+  border-radius: calc(var(--shape-roundish) * 1.25);
+  flex: 0 0 calc(var(--left-align-cornell-cssclass) - var(--gap-cornell-cssclass));
+}
+.cornell .callout[data-callout^=cornell] .callout-title .callout-title-inner {
+  display: flex;
+  /* justify-content: center; */
+  font-size: 1.5em;
+  align-items: center;
+}
+.cornell .callout[data-callout^=cornell] .callout-content {
+  display: flex;
+  background-color: transparent;
+  padding: 0;
+  flex: 0 0 calc(100% - var(--left-align-cornell-cssclass));
+  justify-content: flex-end;
+}
+.cornell .callout[data-callout^=cornell] .callout-icon {
+  display: none;
+}
+.cornell .callout[data-callout=cornell-title] .callout-content {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: var(--text-align-cornell-cssclass);
+  text-align-last: var(--text-align-last-cornell-cssclass);
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+> EY11
+\ HTML
+\ Infobox
+\\ under construction
+──────────────────────────────────────────────────────────────────────────────── */
+aside[class=infobox] {
+  max-width: 50%;
+  margin-left: 0.5rem;
+  border: 0;
+  border-radius: calc(var(--shape-roundish) * 1.25);
+  float: right;
+}
+aside[class=infobox] title {
+  display: block;
+
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-align: center;
+
+  background-color: var(--col-bg-table);
+
+  justify-content: center;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+> EY13
+\ HTML
+\ Aside
+──────────────────────────────────────────────────────────────────────────────── */
+div.cm-html-embed.cm-embed-block > aside {
+  color: var(--text-normal);
+}
+
+aside {
+  max-width: 25%;
+  min-width: 125px;
+
+  background-color: var(--background-primary-alt);
+  box-shadow: none;
+
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+
+  border-left: 2px solid var(--interactive-accent);
+  /* text-align: justify; */
+  word-break: break-word;
+  float: right;
+}
 
 .theme-dark, .theme-light {
     /*Sizes*/
@@ -569,86 +681,6 @@ body.neon-lights h6 {text-shadow: 0 0 var(--light-smooth) #0000FF;}
 
 
 
-/*
-RELATION LINES
-*/
-body:not(.remove-pre-rel-lines) ul > li,
-body:not(.remove-pre-rel-lines) ol > li,
-body:not(.remove-pre-rel-lines) ol,
-body:not(.remove-pre-rel-lines) ul {
-    position: relative;
-}
-
-/* Relationship lines in Preview */
-body:not(.remove-pre-rel-lines) .markdown-preview-view ul ul,
-body:not(.remove-pre-rel-lines) .markdown-preview-view ol ol {
-    position: relative;
-}
-
-body:not(.remove-pre-rel-lines) ul > li::before,
-body:not(.remove-pre-rel-lines) ol > li::before {
-    content: "";
-    border-left-width: var(--rel-line-width);
-    border-left-style: solid;
-    border-left-color: var(--rel-line-color);
-    opacity: 0.8;
-    position: absolute;
-    height: calc(100% - 2em);
-    margin-left: -0.85em;
-    /*left: -0.05em;*/
-    top: 1.6em;
-    bottom: 0;
-}
-
-body:not(.remove-pre-rel-lines) ul ul::before,
-body:not(.remove-pre-rel-lines) ol ol::before {
-    content: "";
-    position: absolute;
-}
-
-body:not(.remove-pre-rel-lines) .markdown-preview-view ol ol::before {
-    margin-left: -0.8em;
-}
-
-/* Relationship line spacing fix for tasks lists */
-body:not(.remove-pre-rel-lines) .markdown-preview-view .task-list-item-checkbox {
-    left: -1px;
-    margin-right: 5px;
-}
-
-body:not(.remove-pre-rel-lines) .markdown-preview-view ul.contains-task-list ul::before,
-body:not(.remove-pre-rel-lines) .markdown-preview-view ol.contains-task-list ol::before {
-    left: -0.1em;
-    bottom: 0.3em;
-}
-
-/* Relationship lines in Edit mode  */
-body:not(.remove-ed-rel-lines) .cm-s-obsidian > .cm-tab,
-body:not(.remove-ed-rel-lines) .cm-hmd-list-indent > .cm-tab,
-body:not(.remove-ed-rel-lines) .rel-lines-edit .cm-hmd-list-indent > .cm-tab {
-    position: relative;
-}
-
-body:not(.remove-ed-rel-lines) .cm-hmd-list-indent > .cm-tab:before,
-body:not(.remove-ed-rel-lines) .rel-lines-edit .cm-hmd-list-indent > .cm-tab:before,
-body:not(.remove-ed-rel-lines) .cm-hmd-list-indent .cm-tab::before {
-    content: "";
-    display: block;
-    position: absolute;
-    opacity: 0.35;
-    top: 0.25em;
-    left: 0.3em;
-    border-left-width: var(--rel-line-width); /*--custom-ed-line-thickness*/
-    border-left-style: solid;
-    border-left-color: var(--rel-line-color); /*--text-faint*/
-    height: 100%;
-}
-
-.cm-s-obsidian .HyperMD-list-line {
-    padding-top: 0;
-}
-
-
 
 /*
 FIXES
@@ -700,28 +732,6 @@ body.colorful-headings {
 name: ❤ d'Arc Experience
 id: darc-experience
 settings:
-    -
-        id: title1
-        title: Relation Lines
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: rel-line-color
-        title: Line color
-        type: variable-color
-        format: hex
-        default: '#7F7F7F'
-    -
-        id: rel-line-width
-        title: Line width
-        description: The width of the relation line in rem units
-        type: variable-number-slider
-        default: 2
-        format: px
-        min: 0
-        max: 3
-        step: 1
     -
         id: title2
         title: Header Lights
