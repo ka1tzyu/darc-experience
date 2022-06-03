@@ -96,7 +96,7 @@ div.cm-html-embed.cm-embed-block > aside {
   color: var(--text-normal);
 }
 
-aside {
+.cornell aside {
   max-width: 25%;
   min-width: 125px;
 
