@@ -1,3 +1,7 @@
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer>.el-lang-dataviewjs {
+    width: var(--line-width-adaptive) !important;
+}
+
 .theme-light, .theme-dark {
   --left-align-cornell-cssclass: 30%;
   --gap-cornell-cssclass: 2.5%;
