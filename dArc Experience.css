@@ -1,3 +1,22 @@
+.wipe-style-color strong, .wipe-style-color em {
+    background: inherit !important;
+    -webkit-background-clip: inherit !important;
+    -webkit-text-fill-color: inherit !important;
+    color: inherit !important;
+}
+
+strong {
+    background: -webkit-linear-gradient(75deg, #ff4848, #fd2727) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+em {
+    background: -webkit-linear-gradient(75deg, #47B2A7, #1be3ce) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer>.el-lang-dataviewjs {
     width: var(--line-width-adaptive) !important;
 }
@@ -240,7 +259,7 @@ img:is([alt*=ctr], [alt*=center]),
 
 /* CARD HEADER FIX */
 .cards.social-card .table-view-tbody span strong a {
-    font-size: 95%;
+    font-size: 90%;
 }
 
 
