@@ -239,17 +239,15 @@ img:is([alt*=ctr], [alt*=center]),
 
 
 /* CARD HEADER FIX */
-.cards .table-view-tbody span strong a {
+.cards.social-card .table-view-tbody span strong a {
     font-size: 95%;
 }
-
 
 
 /* BUTTON CLASSES */
 .darc-button-wide {
     width: 100%;
 }
-
 
 
 /*
@@ -707,16 +705,16 @@ body.timeline-fix-8f5.is-mobile div.timeline .timeline-container .timeline-card 
 /*
 MINIMAL ENHANCE
 */
-.cards table.dataview tbody > tr > td > :not(.el-embed-image) img {border-radius: var(--cards-image-border-5f);}
-.cards table.dataview tbody > tr > td > span {font-size: var(--cards-text-size-5f);}
-.cards table.dataview tbody > tr > td:nth-child(1) > span {font-size: 100%;}
-.cards table.dataview tbody > tr > td:nth-child(2) > span {font-size: 110%;}
+.cards.social-card table.dataview tbody > tr > td > :not(.el-embed-image) img {border-radius: var(--cards-image-border-5f);}
+.cards.social-card table.dataview tbody > tr > td > span {font-size: var(--cards-text-size-5f);}
+.cards.social-card table.dataview tbody > tr > td:nth-child(1) > span {font-size: 100%;}
+.cards.social-card table.dataview tbody > tr > td:nth-child(2) > span {font-size: 110%;}
 
-body.cards-advanced-poster-5f .cards.cards-cover table > tbody > tr > td:nth-child(1) {width: 100%;}
+body.cards-advanced-poster-5f .cards.cards-cover.social-card table > tbody > tr > td:nth-child(1) {width: 100%;}
 
-body.cards-advanced-poster-5f .cards.cards-cover table > tbody > tr > td:nth-child(1) > span {padding-top: 0;}
+body.cards-advanced-poster-5f .cards.cards-cover.social-card table > tbody > tr > td:nth-child(1) > span {padding-top: 0;}
 
-body.cards-center-5f .cards table.dataview tbody > tr > td:not(:last-child):not(:first-child) > .el-p:not(.el-embed-image) {text-align: center;}
+body.cards-center-5f .cards.social-card table.dataview tbody > tr > td:not(:last-child):not(:first-child) > .el-p:not(.el-embed-image) {text-align: center;}
 
 
 
@@ -762,7 +760,7 @@ settings:
     -
         id: light-smooth
         title: Light smooth
-        description: Choose how smoth effect should be in em
+        description: Choose how smooth effect should be in em
         type: variable-number-slider
         default: 0.50
         format: em
