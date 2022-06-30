@@ -16,6 +16,10 @@ div.prompt > div.prompt-results .suggestion-item > span.suggestion-prefix::after
     color: inherit !important;
 }
 
+.full-border blockquote {
+    border-width: 1px !important;
+}
+
 strong {
     background: -webkit-linear-gradient(75deg, #ff4848, #fd2727) !important;
     -webkit-background-clip: text !important;
@@ -740,11 +744,11 @@ MINIMAL ENHANCE
 .cards.social-card table.dataview tbody > tr > td:nth-child(1) > span {font-size: 100%;}
 .cards.social-card table.dataview tbody > tr > td:nth-child(2) > span {font-size: 110%;}
 
-body.cards-advanced-poster-5f .cards.cards-cover.social-card table > tbody > tr > td:nth-child(1) {width: 100%;}
+ .cards.cards-cover.social-card table > tbody > tr > td:nth-child(1) {width: 100%;}
 
-body.cards-advanced-poster-5f .cards.cards-cover.social-card table > tbody > tr > td:nth-child(1) > span {padding-top: 0;}
+.cards.cards-cover.social-card table > tbody > tr > td:nth-child(1) > span {padding-top: 0;}
 
-body.cards-center-5f .cards.social-card table.dataview tbody > tr > td:not(:last-child):not(:first-child) > .el-p:not(.el-embed-image) {text-align: center;}
+.cards.social-card table.dataview tbody > tr > td:not(:last-child):not(:first-child) > .el-p:not(.el-embed-image) {text-align: center;}
 
 
 
@@ -871,7 +875,7 @@ settings:
         default: true
     -
         id: title5
-        title: Minimal Enchance
+        title: Social card
         type: heading
         level: 3
         collapsed: true
@@ -892,18 +896,6 @@ settings:
         type: variable-number
         format: "%"
         default: 100
-    -
-        id: cards-advanced-poster-5f
-        title: Advanced card`s poster
-        description: It makes image wider (cards-cover class is needed!!)
-        type: class-toggle
-        default: false
-    -
-        id: cards-center-5f
-        title: Centerlize card`s text
-        description: Align to center all field excepet first and last
-        type: class-toggle
-        default: false
     -
         id: title4
         title: Minimal Snippets
